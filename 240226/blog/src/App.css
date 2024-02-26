@@ -1,0 +1,15 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{text-decoration: none;}
+ul,ol,li{list-style: none;}
+
+.header{width: 100%; padding: 24px; background-color: darkcyan;}
+.header .container{}
+.header .container .logo > a{color:white;}
+
+.section{width: 100%; padding:48px 0;}
+.section .container{}
+.section .container .row .item{padding: 24px; margin: 20px 0; background-color: whitesmoke; border-radius: 10px;}
+.section .container .row .item .likeBtn{padding:5px 12px; border-radius: 5px; background-color: whitesmoke;}
+.section .container .row .item .likeBtn:hover{background-color: white;}
+
+.detail{padding: 24px; margin: 20px 0; background-color: whitesmoke;}
