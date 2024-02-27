@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{text-decoration: none;}
+ul,ol,li{list-style: none;}
+
+body{background-color: darkcyan; font-family: 'Pretendard-Regular';}
+
+.section{width: 100%; padding:12px 0;}
+.section .container{}
+.section .container .title{text-align: center; color: white; padding:12px 0; font-size: 40px; font-weight: 600;}
+.section .container .row{padding:0; margin-bottom: 12px; background-color: white; border-radius: 10px;}
+
+.section .container .bar{padding:24px;}
+.section .container .bar .filter{padding:0}
+.section .container .bar .add{padding:0;}
+.section .container .bar .col > button{padding:0 5px; border:1px solid lightgray; border-radius: 5px;}
+
+.section .container .list .header{padding:6px 24px; border-bottom: 1px solid lightgray;}
+.section .container .list .header > p{margin: 0; text-align: left; font-weight: 600; font-size: 18px; }
+.section .container .list{padding:6px 0 0;}
+.section .container .list .box{padding:6px 24px; border-bottom: 1px solid lightgray; cursor: pointer;}
+.section .container .list .box:last-of-type{border-bottom: none; border-radius: 0 0 10px 10px;}
+.section .container .list .box:hover{background-color: whitesmoke;}
+.section .container .list .box > p{margin: 0;}
+
+.section .container .row-detail .detail{padding:24px;}
+.section .container .row-detail .detail .info{padding-right: 48px;}
+.section .container .row-detail .detail .info > p{}
