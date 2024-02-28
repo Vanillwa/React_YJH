@@ -1,0 +1,13 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+img{width: 66%;}
+p{margin: 0;}
+body{background-color: black;}
+
+.title{color:white}
+.box .inner{background-color: white; border-radius: 15px; transition: all .2s;}
+.box .inner:hover{box-shadow: 1px -1px 60px 1px rgba(255,255,255,1); transform: scale(1.01);}
+.item-content{ display: -webkit-box; /* 블록 요소를 Flexbox처럼 행동하도록 설정 */
+  -webkit-line-clamp: 3; /* 텍스트의 줄 수를 설정 */
+  -webkit-box-orient: vertical; /* 텍스트를 세로 방향으로 정렬 */
+  overflow: hidden; /* 요소를 벗어나는 내용을 숨김 */}
