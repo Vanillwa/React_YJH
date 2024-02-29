@@ -1,22 +1,12 @@
 /* eslint-disable */
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
 import { useState } from "react";
+import subject from "./data/data";
 
 function App() {
-    // let [title, setTitle] = useState([
-    //     "Hello World!",
-    //     "I love Node.js!",
-    //     "I love Javascript!",
-    // ]);
-    // let [like, setLike] = useState([0, 0, 0]);
-    let [post, setPost] = useState([
-        {title : "Hello World!", date : '24-02-11', like : 0},
-        {title : "I love Node.js!", date : '24-02-12', like : 0},
-        {title : "I love React!", date : '24-02-14', like : 0}
-    ])
+    let {info} = subject
+    let [post, setPost] = useState(info)
     let [detail, setDetail] = useState(false)
 
     function likeInc(i) {
@@ -56,17 +46,17 @@ function App() {
                     </div>
                     <div className="row list">
                         {
-                            post.map((e, i)=>{
+                            post.map((el, i)=>{
                                 return (
-                                    <div key={i} className="item">
-                                        <h3 onClick={()=>{setDetail(i)}}>{e.title}</h3>
+                                    <div key={el.id} className="item">
+                                        <h3 onClick={()=>{setDetail(i)}}>{el.title}</h3>
                                         <p>24-02-26</p>
                                         <button
                                             type="button"
                                             className="likeBtn"
                                             onClick={() => likeInc(i)}
                                         >
-                                            👍 : {e.like}
+                                            👍 : {el.like}
                                         </button>
                                         <input type="text" className="titleInput"></input>
                                         <button

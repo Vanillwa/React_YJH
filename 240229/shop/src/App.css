@@ -1,0 +1,12 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{text-decoration: none;}
+ul,ol,li{list-style: none;}
+img{width: 100%;}
+
+.visual{
+  height: 400px;
+  background-image: url('../public/img/bg.png');
+  background-size: cover;
+  background-position: center;
+}
+

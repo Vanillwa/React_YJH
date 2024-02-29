@@ -16,7 +16,7 @@ function App() {
   // useEffect(()=>{
   //   dataLoad()
   // }, [])
-
+  
   return (
     <div className="App">
       <section className="sec">
