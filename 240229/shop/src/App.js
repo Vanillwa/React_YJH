@@ -12,52 +12,45 @@ import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 
 function App() {
-  let [shoes] = useState(data);
-  let naviGate = useNavigate();
-  let [visualActive, setVisualActive] = useState(true);
-  
-  useEffect(() => {
-    let timer = setTimeout(() => {
-      setVisualActive(false)
-    }, 3000);
-    return ()=>{
-      clearTimeout(timer);
-    }
-  }, []);
+	let [shoes] = useState(data);
+	let naviGate = useNavigate();
+	let [visualActive, setVisualActive] = useState(true);
 
-  return (
-    <>
-      <Header></Header>
-      {visualActive ? <section className="visual"></section> : null}
-      <button
-        onClick={() => {
-          naviGate("/detail");
-        }}
-      >
-        이동
-      </button>
-      <Routes>
-        <Route path="/" element={<Main shoes={shoes} setVisualActive={setVisualActive}></Main>}></Route>
-        <Route path="/detail" element={<Detail shoes={shoes}></Detail>}></Route>
-        <Route
-          path="/detail/:id"
-          element={<Detail shoes={shoes}></Detail>}
-        ></Route>
-        <Route path="/about" element={<About></About>}>
-          <Route path="member" element={<div>member</div>}></Route>
-          <Route path="location" element={<div>location</div>}></Route>
-        </Route>
-        <Route path="/event" element={<Event></Event>}>
-          <Route
-            path="one"
-            element={<div>첫 주문시 신발 청결제 서비스</div>}
-          ></Route>
-          <Route path="two" element={<div>생일기념 쿠폰 받기</div>}></Route>
-        </Route>
-        <Route path="*" element={<NotFound></NotFound>}></Route>
-      </Routes>
-    </>
-  );
+	useEffect(() => {
+		let timer = setTimeout(() => {
+			setVisualActive(false);
+		}, 3000);
+		return () => {
+			clearTimeout(timer);
+		};
+	}, []);
+
+	return (
+		<>
+			<Header></Header>
+			{visualActive ? <section className="visual"></section> : null}
+			<button
+				onClick={() => {
+					naviGate("/detail");
+				}}>
+				이동
+			</button>
+			<Routes>
+				<Route path="/" element={<Main shoes={shoes} setVisualActive={setVisualActive}></Main>}></Route>
+				<Route path="/detail" element={<Detail shoes={shoes}></Detail>}></Route>
+				<Route path="/detail/:id" element={<Detail shoes={shoes}></Detail>}></Route>
+				<Route path="/about" element={<About></About>}>
+					<Route path="member" element={<div>member</div>}></Route>
+					<Route path="location" element={<div>location</div>}></Route>
+				</Route>
+				<Route path="/event" element={<Event></Event>}>
+					<Route path="one" element={<div>첫 주문시 신발 청결제 서비스</div>}></Route>
+					<Route path="two" element={<div>생일기념 쿠폰 받기</div>}></Route>
+				</Route>
+				<Route path="*" element={<NotFound></NotFound>}></Route>
+			</Routes>
+		</>
+	);
 }
 
 export default App;

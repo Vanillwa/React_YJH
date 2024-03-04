@@ -1,0 +1,18 @@
+*{margin:0; padding:0; box-sizing:border-box}
+ul, ol, li{list-style: none;}
+a{text-decoration: none;}
+body{background-color: darkcyan;}
+
+.navbar .container{max-width: 700px;}
+
+.sec .container{min-width: 320px;}
+
+.sec .container .inner{width: 100%; max-width: 700px; margin: 0 auto;}
+
+.sec .container .inner .sec-title{color:white;}
+
+.sec .container .inner .post-form{background-color: white;}
+
+.sec .container .inner .post-form .input-wrapper > label{width: 10%; min-width: 100px;}
+
+.sec .container .inner .post-form .input-wrapper > input{width: 50%;}

@@ -2,11 +2,10 @@ import { useParams } from "react-router-dom";
 
 function Detail(props) {
   let { shoes } = props;
-  let { id } = useParams()
-  if(id == null)
-    id = 0
-  let shoe = shoes.find((el)=>el.id == id)
-  
+  let { id } = useParams();
+  if (id == null) id = 0;
+  let shoe = shoes.find((el) => el.id == id);
+
   return (
     <>
       <section className="sec detail">
@@ -14,10 +13,7 @@ function Detail(props) {
           <h2>Detail</h2>
           <div className="row">
             <div className="col-md-6">
-              <img
-                src={process.env.PUBLIC_URL + "/img/shoe" + (parseInt(id)+1) + ".jpg"}
-                alt=""
-              ></img>
+              <img src={process.env.PUBLIC_URL + "/img/shoe" + (parseInt(id) + 1) + ".jpg"} alt=""></img>
             </div>
             <div className="col-md-6 mt-4">
               <h3 className="pt-5">{shoe.title}</h3>
