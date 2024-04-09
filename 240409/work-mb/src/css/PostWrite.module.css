@@ -1,0 +1,4 @@
+.inner{max-width: 1000px; margin: 24px auto;}
+.inner .form{max-width: 720px; margin: 0 auto; display: flex; flex-flow: column; gap:7px;}
+.inner .form .title{width: 100%;}
+.inner .form .content{width: 100%; min-height: 400px; resize: none;}

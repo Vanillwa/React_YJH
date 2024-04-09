@@ -1,0 +1,6 @@
+table > thead > tr > th{text-align: center;}
+table > tbody > tr > td{text-align: center;}
+
+.inner{max-width: 1000px; margin: 0 auto;}
+.postNum{cursor: pointer;}
+.postTitle {text-align: left; cursor: pointer;}
