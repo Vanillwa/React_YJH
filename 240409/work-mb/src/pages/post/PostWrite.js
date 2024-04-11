@@ -2,9 +2,13 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../../css/PostWrite.module.css'
 import { useMutation } from 'react-query';
 import { postPost } from '../../api/api';
+import { useAuthContext } from '../../context/AuthContext';
+import { useLayoutEffect } from 'react';
 
 function PostWrite() {
 	const navigate = useNavigate();
+	const { memoUserInfo } = useAuthContext()
+	const { isLoggedIn } = memoUserInfo
 
 	const fetchData = useMutation(async (body) => {
 		return await postPost(body)
@@ -23,6 +27,13 @@ function PostWrite() {
 		let body = {title, content, date}
 		fetchData.mutate(body)
 	}
+
+	useLayoutEffect(()=>{
+		if(!isLoggedIn){
+			alert('로그인 후 사용하실 수 있는 기능입니다.')
+			navigate('/auth/login')
+		}
+	}, [])
 
 	return (
 		<div className={styles.inner}>

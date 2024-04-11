@@ -1,12 +1,12 @@
 import { Table } from "react-bootstrap"
 import { useQuery } from "react-query"
-import { getPosts } from "../../api/api"
+import { getPostList } from "../../api/api"
 import styles from '../../css/PostList.module.css'
 import { useNavigate } from "react-router-dom"
 
 function PostList() {
 	const navigate = useNavigate()
-	const { data, status } = useQuery(['getPosts'], () => getPosts(), { retry: 0, refetchOnWindowFocus: false })
+	const { data, status } = useQuery(['getPostList'], () => getPostList(), { retry: 0, refetchOnWindowFocus: false })
 
 	if (status === 'loading') {
 		return (

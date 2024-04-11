@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
 import Main from './pages/Main';
 import Header from './components/Header';
 import PostList from './pages/post/PostList';
@@ -10,6 +9,7 @@ import Join from './pages/auth/Join';
 import { AuthProvider } from './context/AuthContext';
 import PostView from './pages/post/PostView';
 import PostWrite from './pages/post/PostWrite';
+import ChatRoom from './pages/chat/ChatRoom';
 
 function App() {
   return (
@@ -25,10 +25,13 @@ function App() {
               <Route index element={<PostList />}></Route>
               <Route path=':id' element={<PostView />}></Route>
             </Route>
-            <Route path='write' element={<PostWrite/>}></Route>
+            <Route path='write' element={<PostWrite />}></Route>
           </Route>
           <Route path='chat'>
-            <Route path='list' element={<ChatList />}></Route>
+            <Route path='list'>
+              <Route index element={<ChatList />}></Route>
+              <Route path=':id' element={<ChatRoom />}></Route>
+            </Route>
           </Route>
           <Route path='auth'>
             <Route path='login' element={<Login />}>  </Route>

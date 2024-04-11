@@ -4,7 +4,6 @@ import { useAuthContext } from "../context/AuthContext";
 import { logoutUser } from "../api/api";
 
 function Header() {
-	console.log('rendered')
 	const navigate = useNavigate();
 	const { memoUserInfo, logout } = useAuthContext()
 	const { userInfo, isLoggedIn } = memoUserInfo
